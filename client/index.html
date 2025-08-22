@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Landing Page Generator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>AI Landing Page Generator</h1>
+
+      <div class="form">
+        <input id="idea" type="text" placeholder="Travel website" />
+        <select id="category" aria-label="Category">
+          <option value="Startup" selected>Startup</option>
+          <option value="Productivity">Productivity</option>
+        </select>
+        <button id="generate">
+          <span class="btn-text">Generate Landing Page 🔥</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <p class="hint">
+        Tip: describe your idea, e.g. “AI trip planner”, “Note-taking app”, “Team dashboard”.
+      </p>
+    </div>
+
+    <div class="output">
+      <div class="split">
+        <section class="pane">
+          <div class="pane-header">
+            <h2>Preview</h2>
+            <button id="openNewTab" class="ghost">Open in new tab</button>
+          </div>
+          <iframe id="preview" title="Generated preview"></iframe>
+        </section>
+
+        <section class="pane">
+          <div class="pane-header">
+            <h2>HTML Code</h2>
+            <div class="actions">
+              <button id="copy" class="ghost">Copy</button>
+              <button id="download" class="ghost">Download .html</button>
+            </div>
+          </div>
+          <pre id="code"><code><!-- Generated HTML appears here --></code></pre>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
